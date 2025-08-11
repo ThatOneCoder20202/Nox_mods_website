@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nexus Mods Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* General */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #0b0b0e;
+        color: #e0e0e0;
+        display: flex;
+        min-height: 100vh;
+    }
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        background: linear-gradient(180deg, #ff6600, #cc5200);
+        padding-top: 20px;
+        box-shadow: 3px 0 15px rgba(255, 102, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        animation: glowPulse 4s infinite alternate;
+    }
+    .sidebar h2 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        color: #fff3e0;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .nav-link {
+        padding: 15px 20px;
+        color: #ffe6cc;
+        text-decoration: none;
+        display: block;
+        font-weight: 500;
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+    .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: #fff;
+    }
+    /* Content area */
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
+    h1 {
+        color: #ff944d;
+        text-shadow: 0 0 8px rgba(255, 148, 77, 0.7);
+    }
+    p {
+        color: #d9d9d9;
+    }
+    /* Card styling */
+    .card {
+        background-color: #16161f;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 25px rgba(255, 102, 0, 0.7);
+    }
+    .card h2 {
+        margin-top: 0;
+        color: #ff944d;
+    }
+    /* Button */
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #ff6600;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 10px rgba(255, 102, 0, 0.6);
+        animation: buttonPulse 2s infinite;
+    }
+    .btn:hover {
+        background: #e65c00;
+        box-shadow: 0 0 15px rgba(255, 102, 0, 0.9);
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+        body {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: auto;
+        }
+        .nav-link {
+            flex: 1;
+            text-align: center;
+        }
+    }
+    /* Animations */
+    @keyframes glowPulse {
+        0% { box-shadow: 3px 0 15px rgba(255, 102, 0, 0.3); }
+        100% { box-shadow: 3px 0 25px rgba(255, 102, 0, 0.7); }
+    }
+    @keyframes buttonPulse {
+        0% { box-shadow: 0 0 10px rgba(255, 102, 0, 0.6); }
+        100% { box-shadow: 0 0 20px rgba(255, 102, 0, 1); }
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Nexus Mods.lol</h2>
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Projects</a>
+    <a href="#" class="nav-link">Downloads</a>
+</div>
+
+<div class="content">
+    <h1>Welcome to Nexus Mods Hub</h1>
+    <p>All my single-player mods, tools, and packs in one place.</p>
+
+   <div class="card">
+    <h2>Nebula.lol</h2>
+    <p>A sleek PyQt6 mod menu for offline testing.</p>
+    <a href="assets/downloads/test.py" class="btn" download>Download</a>
+</div>
+
+
+
+</body>
+</html>
